@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <Dashboard/>
       },
       {
-        path: 'addHabit',
+        path: 'add',
         element: <AddHabit/>
       },
     ]
