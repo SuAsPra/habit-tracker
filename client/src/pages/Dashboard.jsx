@@ -10,7 +10,6 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const { habits, setHabits } = useOutletContext();
 
-  // 🔄 Mock fetch for dashboard data
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -19,7 +18,6 @@ function Dashboard() {
     return () => clearTimeout(timer);
   }, []);
 
-  // ⏳ Loading UI
   if (loading) {
     return <Loading text="Loading Dashboard..." />;
   }

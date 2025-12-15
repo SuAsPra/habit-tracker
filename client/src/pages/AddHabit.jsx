@@ -19,7 +19,7 @@ export default function AddHabit() {
 
   const navigate = useNavigate();
 
-  // 🔄 Mock fetch
+  // Mock
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -27,8 +27,6 @@ export default function AddHabit() {
 
     return () => clearTimeout(timer);
   }, []);
-
-  // ⏳ Loading screen
   if (loading) {
     return <Loading text="Loading Add Habit..." />;
   }
@@ -72,8 +70,6 @@ export default function AddHabit() {
       };
     }
   );
-
-  // ---------- Actions ----------
   const handleAddHabit = () => {
     if (!habitName.trim()) {
       toast.error("Please enter a habit name!");
@@ -109,7 +105,7 @@ export default function AddHabit() {
     }
   };
 
-  // ---------- UI ----------
+
   return (
     <div className="min-h-screen bg-slate-900 p-6">
       <div className="max-w-5xl mx-auto bg-slate-800 rounded-2xl p-8 border border-sky-800">
